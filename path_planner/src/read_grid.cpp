@@ -74,8 +74,8 @@ public:
         // Initialize start and goal positions
         start_x_ = 5.0;
         start_y_ = 0.0;
-        goal_x_ = 18.0;
-        goal_y_ = 15.0;
+        goal_x_ = 7.5;
+        goal_y_ = 8.0;
 
         // Create the interactive marker server
         server_ = std::make_shared<interactive_markers::InteractiveMarkerServer>(
