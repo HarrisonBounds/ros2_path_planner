@@ -5,7 +5,6 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /Status1
       Splitter Ratio: 0.5
     Tree Height: 707
   - Class: rviz_common/Selection
@@ -84,13 +83,22 @@ Visualization Manager:
       Enabled: true
       Name: MarkerArray
       Namespaces:
-        path_points: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /path_markers
+      Value: true
+    - Class: rviz_default_plugins/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: true
+      Interactive Markers Namespace: /path_planner_markers
+      Name: InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
       Value: true
   Enabled: true
   Global Options:
@@ -138,16 +146,16 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 46.79014587402344
+      Distance: 21.108230590820312
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 9.891178131103516
-        Y: 4.659974575042725
-        Z: -8.78351879119873
+        X: 3.0563364028930664
+        Y: 1.9668447971343994
+        Z: -3.6927123069763184
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
@@ -156,7 +164,7 @@ Visualization Manager:
       Pitch: 0.8303979635238647
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.0903977155685425
+      Yaw: 1.085397720336914
     Saved: ~
 Window Geometry:
   Displays:
@@ -174,5 +182,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1854
-  X: 1400
-  Y: 1112
+  X: 66
+  Y: 32
