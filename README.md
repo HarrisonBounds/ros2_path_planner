@@ -26,7 +26,7 @@ ros2 launch bringup bringup.launch.xml
 
 When running a custom map, there are two options. There is a `generate_custom_occupancy_grid` node in the spawn_map package that manually creates a map via an array of values where 100 represents a wall and 0 represents a free area. To make your own map manually you can edit these values, or create them with an algorithm using a for loop
 
-Another option is reading your own file. If you want to read your own PNG map file, make sure its in the `maps` folder in the `spawn_map` package. Then in the `generate_occupancy_grid` node, edit the file name to the one that matches the name of your map. 
+Another option is reading your own file. If you want to read your own PNG map file, make sure its in the `maps` folder in the `spawn_map` package. Then in the `bringup.launch.xml` launchfile, edit the `image_file_path` parameter for the `generate_occupancy_grid` node to the one that matches the name of your map. 
 
 ---
 
