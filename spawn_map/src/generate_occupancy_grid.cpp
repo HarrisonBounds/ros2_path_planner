@@ -14,6 +14,8 @@ public:
     MapPublisher()
         : Node("map_publisher")
     {
+        this->declare_parameter<std::string>("image_file_path", "/home/harrison-bounds/ws/motionplanner/src/ros_motion_planner/spawn_map/maps/maze_map.png");
+        image_file_path = this->get_parameter("image_file_path").as_string();
         // Publisher for the occupancy grid
         map_pub = this->create_publisher<nav_msgs::msg::OccupancyGrid>("/custom_occupancy_grid", 10);
 
@@ -28,7 +30,7 @@ private:
     void load_map()
     {
         // Path to the PNG map file (update this path as needed)
-        std::string image_file_path = "/home/harrison-bounds/ws/motionplanner/src/ros_motion_planner/spawn_map/maps/maze_map.png";
+        // std::string image_file_path = "/home/harrison-bounds/ws/motionplanner/src/ros_motion_planner/spawn_map/maps/maze_map.png";
 
         // Hardcoded metadata
         double resolution = 0.02;                     // Increase resolution (reduce precision) to make the map smaller
@@ -104,6 +106,7 @@ private:
     rclcpp::Publisher<nav_msgs::msg::OccupancyGrid>::SharedPtr map_pub;
     rclcpp::TimerBase::SharedPtr timer_;
 
+    std::string image_file_path;
     cv::Mat map_image_;                               // Store the map image
     nav_msgs::msg::OccupancyGrid occupancy_grid_msg_; // Store the occupancy grid message
 };

@@ -2,6 +2,7 @@
 
     <node pkg="spawn_map" exec="generate_occupancy_grid">
         <remap from="custom_occupancy_grid" to="custom_occupancy_grid"/>
+        <param name="image_file_path" value="$(find-pkg-share spawn_map)/maps/maze_map.png"/>
     </node>
 
     <node pkg="path_planner" exec="read_grid">
